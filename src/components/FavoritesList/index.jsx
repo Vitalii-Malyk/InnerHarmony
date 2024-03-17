@@ -3,11 +3,11 @@ import { Message, StyledContainer } from "./FavoritesList.styled";
 import {
   List,
   LoadMoreBtn,
-} from "components/PsychologistsList/PsychologistsList.styled";
-import SingleCard from "components/SingleCard/SingleCard";
+} from "../PsychologistsList/PsychologistsList.styled";
+import SingleCard from "../SingleCard";
 import { useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/selectors";
-import Filter from "components/Filter/Filter";
+import Filter from "../Filter";
 
 const FavoritesList = ({ openModal }) => {
   const favorites = useSelector(selectFavorites);

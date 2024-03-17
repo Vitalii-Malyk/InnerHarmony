@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "styles/GlobalStyles";
+import { Container } from "../../styles/GlobalStyles";
 
 export const StyledContainer = styled(Container)`
   padding-top: 64px;
