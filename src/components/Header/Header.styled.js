@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Container } from "../../GlobalStyles";
+import { Container } from "../../styles/GlobalStyles";
 
 export const StyledContainer = styled(Container)`
   padding-top: 24px;

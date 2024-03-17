@@ -14,13 +14,13 @@ import {
   UserIcon,
   UserName,
 } from "./Header.styled";
-import Modal from "../Modal/Modal";
-import LoginForm from "../LoginForm/LoginForm";
-import RegisterForm from "components/RegisterForm/RegisterForm";
+import Modal from "../Modal";
+import LoginForm from "../LoginForm";
+import RegisterForm from "../RegisterForm";
 import { useDispatch } from "react-redux";
 import { removeUser } from "../../redux/auth/slice";
-import sprite from "../../images/sprite.svg";
-import { useAuth } from "hooks/useAuth";
+import sprite from "../../helpers/icons/sprite.svg";
+import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-toastify";
 
 const Header = () => {
