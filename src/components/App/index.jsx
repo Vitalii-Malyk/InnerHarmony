@@ -1,9 +1,9 @@
-import HomePage from "pages/HomePage";
+import HomePage from "../../Page/Home/HomePage";
 import { Route, Routes } from "react-router-dom";
-import Layout from "./Layout";
-import Psychologists from "pages/Psychologists";
-import Favorites from "pages/Favorites";
-import PrivateRoute from "routes/PrivateRoute";
+import Layout from "../Layout";
+import Psychologists from "../../Page/Psychologists/PsychologistsPage";
+import FavoritesPage from "../../Page/Favorites/FavoritesPage";
+import PrivateRoute from "../../routes/PrivateRoute";
 
 export const App = () => {
   return (
@@ -16,7 +16,7 @@ export const App = () => {
             path="favorites"
             element={
               <PrivateRoute>
-                <Favorites />
+                <FavoritesPage />
               </PrivateRoute>
             }
           />
