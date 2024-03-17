@@ -1,6 +1,6 @@
-import FavoritesList from "components/FavoritesList/FavoritesList";
+import FavoritesList from "../../components/FavoritesList";
 
-const Favorites = () => {
+const FavoritesPage = () => {
   return (
     <>
       <FavoritesList />
@@ -8,4 +8,4 @@ const Favorites = () => {
   );
 };
 
-export default Favorites;
+export default FavoritesPage;
