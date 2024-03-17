@@ -1,10 +1,11 @@
-import { TitleStyle } from "./FavoritesPage.styled";
+import FavoritesList from "components/FavoritesList/FavoritesList";
 
-const FavoritesPage = () => {
+const Favorites = () => {
   return (
     <>
-      <TitleStyle>Favorites</TitleStyle>
+      <FavoritesList />
     </>
   );
 };
-export default FavoritesPage;
+
+export default Favorites;

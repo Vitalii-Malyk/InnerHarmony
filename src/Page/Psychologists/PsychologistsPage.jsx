@@ -1,10 +1,7 @@
-import { TitleStyle } from "./PsychologistsPage.styled";
+import PsychologistsList from "components/PsychologistsList/PsychologistsList";
 
 const PsychologistsPage = () => {
-  return (
-    <>
-      <TitleStyle>Psychologists</TitleStyle>
-    </>
-  );
+  return <PsychologistsList />;
 };
+
 export default PsychologistsPage;
