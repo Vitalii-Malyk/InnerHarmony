@@ -1,32 +1,18 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import fontObject from "./fonts";
 
-const GlobalStyles = createGlobalStyle`
+const { regular, medium, semibold, bold } = fontObject;
 
-:root {
-    --primary-color-text: rgba(25, 26, 21, 1); 
-    --accent-color-text: rgba(84, 190, 150, 1);
-    --white-color-text: rgba(251, 251, 251, 1);
-    --grey-color-text: rgba(25, 26, 21, 0.3);
- 
-    --white-color: rgba(251, 251, 251, 1);
-    --accent-color-normal: rgba(84, 190, 150, 1);
-    --accent-color-hover: rgba(54, 163, 121, 1);
-    --grey-color-border: rgba(25, 26, 21, 0.1);
-    
-    --color-star: rgba(255, 197, 49, 1);
+export const GlobalStyles = createGlobalStyle`
 
-  }
+@font-face {
+  font-family: 'Inter';
+  src: url(${regular}), url(${medium}), url(${semibold}), url(${bold});
+  font-weight: 400 500 600 700;
+  font-display: swap;
+}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-  }
-  
-  h1,
+h1,
 h2,
 h3,
 h4,
@@ -34,34 +20,62 @@ h5,
 h6,
 p {
   margin: 0;
-  padding: 0;
 }
 
-a {
-  text-decoration: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  background: #F3F3F3;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-img {
-  display: block;
-
-  height: auto;
+a {
+  color: currentColor;
+  text-decoration: none;
 }
 
 button {
   cursor: pointer;
-  padding: 0;
+  border: none;
+  color: inherit;
 }
 
-* {
-  box-sizing: border-box;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-
 `;
 
-export default GlobalStyles;
+export const Container = styled.div`
+  padding-left: 128px;
+  padding-right: 128px;
+
+  @media only screen and (max-width: 768px) {
+    padding-left: 68px;
+    padding-right: 68px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: 320px) and (max-width: 374px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+`;
