@@ -1,19 +1,16 @@
-import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
-
-// import { Loader } from "components/Loading/Loading";
-import { AppBarComponent } from "../AppBar";
-import { Container } from "../Container/Container.styled";
+import Header from "../Header";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
-      <AppBarComponent />
-      <Container>
-        <Suspense fallback={"loading...."}>
+      <Header />
+      <main>
+        <Suspense fallback="Loading...">
           <Outlet />
         </Suspense>
-      </Container>
+      </main>
     </>
   );
 };
