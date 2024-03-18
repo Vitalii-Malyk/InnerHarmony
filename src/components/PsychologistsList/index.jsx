@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { List, LoadMoreBtn, StyledContainer } from "./PsychologistsList.styled";
 import { collection, getDocs } from "firebase/firestore/lite";
 import { db } from "../../firebase";
-import SingleCard from "../../components/SingleCard";
+import SingleCard from "../SingleCard";
 import { useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/selectors";
-import Filter from "../../components/Filter";
+import Filter from "../Filter";
 
 const PsychologistsList = ({ openModal }) => {
   const favorites = useSelector(selectFavorites);

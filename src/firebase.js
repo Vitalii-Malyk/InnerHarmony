@@ -1,20 +1,23 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore/lite";
+import { getAuth } from "firebase/auth";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBtJ5GQzzjAjQAVdZnjlZZZrklaosq7OyE",
-  authDomain: "innerharmony-31976.firebaseapp.com",
+  apiKey: "AIzaSyCIFgeCfaokDuKqvo2hhJS9ncp9eJoJ4F4",
+  authDomain: "innerharmony-691ae.firebaseapp.com",
   databaseURL:
-    "https://innerharmony-31976-default-rtdb.europe-west1.firebasedatabase.app/",
-  projectId: "innerharmony-31976",
-  storageBucket: "innerharmony-31976.appspot.com",
-  messagingSenderId: "773945255098",
-  appId: "1:773945255098:web:6633066728451267744e83",
-  measurementId: "G-TK304FEDWN",
+    "https://innerharmony-691ae-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "innerharmony-691ae",
+  storageBucket: "innerharmony-691ae.appspot.com",
+  messagingSenderId: "724792447216",
+  appId: "1:724792447216:web:ce49b77c440fae7756b235",
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const auth = getAuth(app);
