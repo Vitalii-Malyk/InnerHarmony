@@ -11,7 +11,7 @@ import {
   Wrapper,
 } from "./LoginForm.styled";
 import { Formik } from "formik";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/auth/slice";

@@ -18,7 +18,7 @@ import Reviews from "../Reviews";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/selectors";
 import { addToFavorites, removeFromFavorites } from "../../redux/slice";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import { useAuth } from "../../hooks/useAuth";
 import Modal from "../Modal";
 

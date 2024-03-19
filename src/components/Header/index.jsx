@@ -21,7 +21,6 @@ import { useDispatch } from "react-redux";
 import { removeUser } from "../../redux/auth/slice";
 import sprite from "../../helpers/icons/sprite.svg";
 import { useAuth } from "../../hooks/useAuth";
-import { toast } from "react-toastify";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -42,7 +41,6 @@ const Header = () => {
   };
   const handleLogout = () => {
     dispatch(removeUser());
-    toast(`Good bye!`);
   };
 
   return (

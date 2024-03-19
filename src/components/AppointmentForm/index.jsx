@@ -11,12 +11,12 @@ import {
   Wrapper,
 } from "./AppointmentForm.styled";
 import { Formik } from "formik";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 const AppointmentForm = ({ psychologist, closeModal }) => {
   const { name, avatar_url } = psychologist;
   const handleFormSubmit = (values) => {
-    toast.success(`Made an appointment successfully!`);
+    toast.success(`You are scheduled for an appointment at ${values.time} !`);
     closeModal();
   };
   return (

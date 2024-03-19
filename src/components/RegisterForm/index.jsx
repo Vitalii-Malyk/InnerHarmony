@@ -11,7 +11,7 @@ import { useState } from "react";
 import sprite from "../../helpers/icons/sprite.svg";
 import { SubmitBtn } from "./RegisterForm.styled";
 import { Formik } from "formik";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import {
   getAuth,
   createUserWithEmailAndPassword,
