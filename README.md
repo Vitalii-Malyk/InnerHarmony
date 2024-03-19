@@ -13,11 +13,26 @@
 
 ![Appointment](https://github.com/Vitalii-Malyk/InnerHarmony/blob/262bc5aca320b909c61644d025eea00cba27a43e/src/helpers/imgFromReadme/Appointment.png)
 
-# React + Vite
+A platform designed for a company specializing in connecting users with professional psychologists.
+The website prioritizes desktop compatibility and adapts seamlessly across various screen sizes, with breakpoints set at 320px, 375px, 768px, and 1440px. Modal interfaces are incorporated for hassle-free Sign In and Sign Up processes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Utilizing Firebase_DB enables comprehensive user authentication functionalities, including registration, login, user data retrieval, and logout features.
 
-Currently, two official plugins are available:
+The application encompasses three key sections:
+
+Homepage (/): Crafted to highlight the array of services available.
+Psychologists Page (/psychologists): Presents a comprehensive list of psychologists, with intuitive category-based filtering options.
+Favorites Page (/favorites): Provides users with a dedicated space to save their preferred psychologists, complete with advanced filtering capabilities.
+
+🛠️ Technology Stack
+React + Vite
+Redux Toolkit
+styled-components
+Additional libraries employed include Formik, Yup, React-hot-toast, and React-Select.
+
+
+
+
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
