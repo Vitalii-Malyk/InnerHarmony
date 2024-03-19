@@ -19,8 +19,27 @@ import {
 import sprite from "../../helpers/icons/sprite.svg";
 import usual from "../../helpers/img/HeroImg@1x.jpg";
 import retina from "../../helpers/img/HeroImg@2x.jpg";
+import { useEffect, useState } from "react";
+import { db } from "../../firebase";
+import { collection, getDocs } from "firebase/firestore/lite";
 
 const Home = () => {
+  const [collectionSize, setCollectionSize] = useState(0);
+
+  useEffect(() => {
+    async function fetchPsychologists() {
+      try {
+        const psychologistsCol = collection(db, "psychologists");
+        const psychologistsSnapshot = await getDocs(psychologistsCol);
+        const psychologistsList = psychologistsSnapshot.docs.length;
+        setCollectionSize(psychologistsList);
+      } catch (error) {
+        console.error("Error fetching psychologists:", error);
+      }
+    }
+    fetchPsychologists();
+  }, []);
+
   return (
     <>
       <StyledContainer>
@@ -56,7 +75,9 @@ const Home = () => {
               </CheckBackground>
               <div>
                 <InfoTitle>Experienced psychologists</InfoTitle>
-                <InfoNumber>15,000</InfoNumber>
+                <InfoNumber>
+                  {collectionSize === 0 ? 32 : collectionSize}
+                </InfoNumber>
               </div>
             </HeroInfoBox>
             <QuestionIcon>
