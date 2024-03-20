@@ -9,8 +9,9 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { authReducer } from "./auth/slice";
 import { configureStore } from "@reduxjs/toolkit";
+
+import { authReducer } from "./auth/slice";
 import { psychologistsReducer } from "./slice";
 
 const authPersistConfig = {

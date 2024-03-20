@@ -1,15 +1,16 @@
 import ReactDOM from "react-dom/client";
-import { App } from "./components/App";
-import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { GlobalStyles } from "./styles/GlobalStyles";
+import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./styles/theme";
 import { Toaster } from "react-hot-toast";
 
+import { App } from "./components/App";
 import "./firebase";
-import { Provider } from "react-redux";
 import { store } from "./redux/store";
+
+import "./index.css";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import { theme } from "./styles/theme";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider theme={theme}>
