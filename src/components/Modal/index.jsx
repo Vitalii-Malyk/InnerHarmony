@@ -1,6 +1,8 @@
 import { useCallback, useEffect } from "react";
-import { CloseBtn, ModalContent, ModalOverlay } from "./Modal.styled";
+
 import sprite from "../../helpers/icons/sprite.svg";
+
+import { CloseBtn, ModalContent, ModalOverlay } from "./Modal.styled";
 
 const Modal = ({ isOpen, onClose, children }) => {
   const handleKeyDown = useCallback(

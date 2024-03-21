@@ -1,5 +1,6 @@
-import HomePage from "../../Page/Home/HomePage";
 import { Route, Routes } from "react-router-dom";
+
+import HomePage from "../../Page/Home/HomePage";
 import Layout from "../Layout";
 import Psychologists from "../../Page/Psychologists/PsychologistsPage";
 import FavoritesPage from "../../Page/Favorites/FavoritesPage";

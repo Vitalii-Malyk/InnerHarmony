@@ -1,4 +1,14 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import toast from "react-hot-toast";
+
+import sprite from "../../helpers/icons/sprite.svg";
+import Reviews from "../Reviews";
+import { selectFavorites } from "../../redux/selectors";
+import { addToFavorites, removeFromFavorites } from "../../redux/slice";
+import { useAuth } from "../../hooks/useAuth";
+import Modal from "../Modal";
+
 import {
   BtnFav,
   Desc,
@@ -13,14 +23,6 @@ import {
   ReadMoreBtn,
   Statistics,
 } from "./SingleCard.styled";
-import sprite from "../../helpers/icons/sprite.svg";
-import Reviews from "../Reviews";
-import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites } from "../../redux/selectors";
-import { addToFavorites, removeFromFavorites } from "../../redux/slice";
-import toast from "react-hot-toast";
-import { useAuth } from "../../hooks/useAuth";
-import Modal from "../Modal";
 
 const SingleCard = ({ psychologist, openModal }) => {
   const { isAuth } = useAuth();

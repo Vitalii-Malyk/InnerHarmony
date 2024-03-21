@@ -1,4 +1,13 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import Modal from "../Modal";
+import LoginForm from "../LoginForm";
+import RegisterForm from "../RegisterForm";
+import { removeUser } from "../../redux/auth/slice";
+import sprite from "../../helpers/icons/sprite.svg";
+import { useAuth } from "../../hooks/useAuth";
+
 import {
   AccountBox,
   AccountInfo,
@@ -11,16 +20,10 @@ import {
   SignUpBtn,
   Span,
   StyledContainer,
+  StyledHeader,
   UserIcon,
   UserName,
 } from "./Header.styled";
-import Modal from "../Modal";
-import LoginForm from "../LoginForm";
-import RegisterForm from "../RegisterForm";
-import { useDispatch } from "react-redux";
-import { removeUser } from "../../redux/auth/slice";
-import sprite from "../../helpers/icons/sprite.svg";
-import { useAuth } from "../../hooks/useAuth";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -45,7 +48,7 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <StyledHeader>
         <StyledContainer>
           <NameNavLink to="/">
             <Span>psychologists.</Span>services
@@ -80,7 +83,7 @@ const Header = () => {
             </AccountBox>
           )}
         </StyledContainer>
-      </header>
+      </StyledHeader>
       <Modal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal}>
         <LoginForm closeModal={handleCloseLoginModal} />
       </Modal>

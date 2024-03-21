@@ -1,3 +1,6 @@
+import { Formik } from "formik";
+import toast from "react-hot-toast";
+
 import {
   Desc,
   Form,
@@ -10,8 +13,6 @@ import {
   Title,
   Wrapper,
 } from "./AppointmentForm.styled";
-import { Formik } from "formik";
-import toast from "react-hot-toast";
 
 const AppointmentForm = ({ psychologist, closeModal }) => {
   const { name, avatar_url } = psychologist;

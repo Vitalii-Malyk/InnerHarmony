@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { Container } from "../../styles/GlobalStyles";
 
 export const StyledContainer = styled(Container)`
@@ -16,6 +17,13 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 32px;
   margin-bottom: 64px;
+  @media only screen and (max-width: 768px) {
+    width: fit-content;
+  }
+  @media only screen and (max-width: 375px) {
+    width: fit-content;
+    padding: 5px;
+  }
 `;
 
 export const LoadMoreBtn = styled.button`

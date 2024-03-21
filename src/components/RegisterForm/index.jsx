@@ -1,3 +1,17 @@
+import { useState } from "react";
+import { Formik } from "formik";
+import toast from "react-hot-toast";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { useDispatch } from "react-redux";
+
+import { setUser } from "../../redux/auth/slice";
+import { registerSchema } from "../../schemas/yupSchemas";
+import sprite from "../../helpers/icons/sprite.svg";
+
 import {
   Form,
   Icon,
@@ -7,19 +21,8 @@ import {
   Title,
   Wrapper,
 } from "../LoginForm/LoginForm.styled";
-import { useState } from "react";
-import sprite from "../../helpers/icons/sprite.svg";
+
 import { SubmitBtn } from "./RegisterForm.styled";
-import { Formik } from "formik";
-import toast from "react-hot-toast";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  updateProfile,
-} from "firebase/auth";
-import { useDispatch } from "react-redux";
-import { setUser } from "../../redux/auth/slice";
-import { registerSchema } from "../../schemas/yupSchemas";
 
 const RegisterForm = ({ closeModal }) => {
   const dispatch = useDispatch();

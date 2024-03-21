@@ -8,12 +8,16 @@ export const Item = styled.li`
   display: flex;
   gap: 24px;
 
+  @media only screen and (max-width: 930px) {
+    flex-wrap: wrap;
+  }
   @media only screen and (max-width: 768px) {
-    padding-top: 60px;
+    padding: 10px;
+    flex-direction: column;
+    width: clamp(250px, 95%, 765px);
   }
 
   @media only screen and (max-width: 375px) {
-    flex-direction: column;
   }
 `;
 
@@ -31,10 +35,13 @@ export const Statistics = styled.div`
   & span {
     color: ${({ theme }) => theme.colors.green};
   }
-
+  @media only screen and (max-width: 768px) {
+    position: static;
+  }
   @media only screen and (max-width: 375px) {
     top: 10px;
     right: 10px;
+    position: static;
   }
 `;
 
@@ -99,6 +106,10 @@ export const ImageWrapper = styled.div`
     top: 9px;
     right: 14px;
     fill: ${({ theme }) => theme.colors.green};
+  }
+  @media only screen and (max-width: 768px) {
+    max-width: 100px;
+    margin-top: 10px;
   }
 
   @media only screen and (max-width: 375px) {

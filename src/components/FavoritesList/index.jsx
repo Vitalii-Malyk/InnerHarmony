@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
+import SingleCard from "../SingleCard";
+import { selectFavorites } from "../../redux/selectors";
+import Filter from "../Filter";
+
 import { Message, StyledContainer } from "./FavoritesList.styled";
 import {
   List,
   LoadMoreBtn,
 } from "../PsychologistsList/PsychologistsList.styled";
-import SingleCard from "../SingleCard";
-import { useSelector } from "react-redux";
-import { selectFavorites } from "../../redux/selectors";
-import Filter from "../Filter";
 
 const FavoritesList = ({ openModal }) => {
   const favorites = useSelector(selectFavorites);

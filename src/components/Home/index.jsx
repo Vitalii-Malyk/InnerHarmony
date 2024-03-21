@@ -1,3 +1,11 @@
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore/lite";
+
+import sprite from "../../helpers/icons/sprite.svg";
+import usual from "../../helpers/img/HeroImg@1x.jpg";
+import retina from "../../helpers/img/HeroImg@2x.jpg";
+import { db } from "../../firebase";
+
 import {
   HeroText,
   HeroTitle,
@@ -15,13 +23,6 @@ import {
   QuestionIcon,
   UsersIcon,
 } from "./Home.styled.js";
-
-import sprite from "../../helpers/icons/sprite.svg";
-import usual from "../../helpers/img/HeroImg@1x.jpg";
-import retina from "../../helpers/img/HeroImg@2x.jpg";
-import { useEffect, useState } from "react";
-import { db } from "../../firebase";
-import { collection, getDocs } from "firebase/firestore/lite";
 
 const Home = () => {
   const [collectionSize, setCollectionSize] = useState(0);

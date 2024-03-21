@@ -1,6 +1,18 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+
 import { Container } from "../../styles/GlobalStyles";
+
+export const StyledHeader = styled.header`
+  display: block;
+
+  @media only screen and (max-width: 768px) {
+  }
+
+  @media only screen and (max-width: 375px) {
+    width: 100%;
+  }
+`;
 
 export const StyledContainer = styled(Container)`
   padding-top: 24px;
@@ -13,6 +25,7 @@ export const StyledContainer = styled(Container)`
   @media only screen and (max-width: 768px) {
     padding-top: 14px;
     padding-bottom: 14px;
+    gap: 14px;
   }
 
   @media only screen and (max-width: 375px) {

@@ -1,5 +1,13 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Formik } from "formik";
+import toast from "react-hot-toast";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
 import sprite from "../../helpers/icons/sprite.svg";
+import { setUser } from "../../redux/auth/slice";
+import { loginSchema } from "../../schemas/yupSchemas";
+
 import {
   Form,
   Icon,
@@ -10,12 +18,6 @@ import {
   Title,
   Wrapper,
 } from "./LoginForm.styled";
-import { Formik } from "formik";
-import toast from "react-hot-toast";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "../../redux/auth/slice";
-import { loginSchema } from "../../schemas/yupSchemas";
 
 const LoginForm = ({ closeModal }) => {
   const dispatch = useDispatch();

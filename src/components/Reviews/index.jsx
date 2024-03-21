@@ -1,5 +1,9 @@
 import { useState } from "react";
+
 import sprite from "../../helpers/icons/sprite.svg";
+import AppointmentForm from "../AppointmentForm";
+import Modal from "../Modal";
+
 import {
   Comment,
   LetterBox,
@@ -9,8 +13,6 @@ import {
   Rating,
   Reviewer,
 } from "./Reviews.styled";
-import AppointmentForm from "../AppointmentForm";
-import Modal from "../Modal";
 
 const Reviews = ({ reviews, psychologist }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
