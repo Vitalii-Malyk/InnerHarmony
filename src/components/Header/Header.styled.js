@@ -22,7 +22,7 @@ export const StyledContainer = styled(Container)`
   align-items: center;
   border-bottom: 1px solid rgba(25, 26, 21, 0.1);
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1020px) {
     padding-top: 14px;
     padding-bottom: 14px;
     gap: 14px;

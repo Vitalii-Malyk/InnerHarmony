@@ -35,7 +35,7 @@ export const Statistics = styled.div`
   & span {
     color: ${({ theme }) => theme.colors.green};
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 800px) {
     position: static;
   }
   @media only screen and (max-width: 375px) {
