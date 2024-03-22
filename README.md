@@ -1,4 +1,4 @@
-                                                          InnerHarmony
+# <p align="center">InnerHarmony</p>
 ![Home Page](https://github.com/Vitalii-Malyk/InnerHarmony/blob/262bc5aca320b909c61644d025eea00cba27a43e/src/helpers/imgFromReadme/Homepage.png)
 
 ![Registration](https://github.com/Vitalii-Malyk/InnerHarmony/blob/262bc5aca320b909c61644d025eea00cba27a43e/src/helpers/imgFromReadme/Registration.png)
@@ -24,8 +24,10 @@ Homepage (/): Crafted to highlight the array of services available.
 Psychologists Page (/psychologists): Presents a comprehensive list of psychologists, with intuitive category-based filtering options.
 Favorites Page (/favorites): Provides users with a dedicated space to save their preferred psychologists, complete with advanced filtering capabilities.
 
-🛠️ Technology Stack
-React + Vite
-Redux Toolkit
-styled-components
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org)
+- [styled-components](https://styled-components.com)
+  
 Additional libraries employed include Formik, Yup, React-hot-toast, and React-Select.
