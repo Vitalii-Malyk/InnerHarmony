@@ -24,6 +24,7 @@ const customStyles = {
     height: "48px",
     paddingLeft: "18px",
     paddingRight: "18px",
+    cursor: "pointer",
   }),
   option: (baseStyles, state) => ({
     ...baseStyles,

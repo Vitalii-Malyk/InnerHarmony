@@ -15,12 +15,11 @@ const {
 const firebaseConfig = {
   apiKey: VITE_FIREBASE_API_KEY,
   authDomain: ITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL:
-    "https://innerharmony-691ae-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "innerharmony-691ae",
-  storageBucket: "innerharmony-691ae.appspot.com",
-  messagingSenderId: "724792447216",
-  appId: "1:724792447216:web:ce49b77c440fae7756b235",
+  databaseURL: VITE_FIREBASE_DATABASE_URL,
+  projectId: VITE_FIREBASE_PROJECT_ID,
+  storageBucket: VITE_FIREBASE_STORAGE_BUCKENT,
+  messagingSenderId: VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

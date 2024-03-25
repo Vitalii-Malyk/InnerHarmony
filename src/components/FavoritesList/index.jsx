@@ -33,17 +33,13 @@ const FavoritesList = ({ openModal }) => {
         ]);
         break;
       case "Less than 10$":
-        setFilteredData(() => [
-          ...favorites.filter(
-            (psychologist) => psychologist.price_per_hour < 10
-          ),
+        setFilteredData((prevData) => [
+          ...prevData.sort((a, b) => a.price_per_hour - b.price_per_hour),
         ]);
         break;
       case "Greater than 10$":
-        setFilteredData(() => [
-          ...favorites.filter(
-            (psychologist) => psychologist.price_per_hour >= 10
-          ),
+        setFilteredData((prevData) => [
+          ...prevData.sort((a, b) => b.price_per_hour - a.price_per_hour),
         ]);
         break;
       case "Popular":

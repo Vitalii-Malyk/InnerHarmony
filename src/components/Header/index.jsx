@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import Modal from "../Modal";
 import LoginForm from "../LoginForm";
@@ -27,6 +28,7 @@ import {
 
 const Header = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { isAuth, name } = useAuth();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -44,6 +46,7 @@ const Header = () => {
   };
   const handleLogout = () => {
     dispatch(removeUser());
+    navigate("/");
   };
 
   return (

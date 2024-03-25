@@ -63,6 +63,9 @@ export const NavBarLink = styled(NavLink)`
   font-weight: 400;
   line-height: 1.25em;
   letter-spacing: -0.16px;
+  &:hover {
+    color: ${({ theme }) => theme.colors.mainGreen};
+  }
 
   &.active::after {
     content: "";
@@ -91,6 +94,9 @@ export const SignInBtn = styled.button`
   font-weight: 500;
   line-height: 1.25em;
   letter-spacing: -0.16px;
+  &:hover {
+    background: ${({ theme }) => theme.colors.mainGreen};
+  }
 
   @media only screen and (max-width: 768px) {
     padding: 7px 20px;
